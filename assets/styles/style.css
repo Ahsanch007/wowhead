@@ -1,0 +1,430 @@
+
+body{
+    background-color: #000;
+}
+
+
+
+.hero-talent {
+    display: inline-block;
+    max-width: 400px;
+    vertical-align: middle;
+    width: 100%;
+}
+
+.hero-talent-trees {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 20px;
+    justify-content: center;
+    margin: 10px;
+    padding: 10px;
+    position: relative;
+}
+.hero-talent-trees-tree {
+    width: 100%;
+}
+.hero-talent-tree {
+    position: relative;
+    user-select: none;
+}
+.hero-talent-tree-space {
+    padding-bottom: 140%;
+    position: relative;
+    
+}
+.hero-talent-tree-grid {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.hero-talent-tree-talent[data-talent-type="2"][data-available] {
+    --heroTalent-boundaryImage: url("../images/talents-node-circle-green.webp");
+}
+.hero-talent-tree-talent-boundary, .hero-talent-tree-talent-inner, .hero-talent-tree-talent-inner-background {
+    box-sizing: border-box;
+    inset: 0;
+    position: absolute;
+}
+.hero-talent-tree-talent[data-talent-type="2"] .hero-talent-tree-talent-inner {
+    border-radius: 1000px;
+}
+.hero-talent-tree-talent-inner {
+    inset: 10%;
+    overflow: hidden;
+}
+.hero-talent-tree-talent-boundary-frame {
+    background-image: var(--heroTalent-boundaryImage);
+    background-size: cover;
+    inset: 0;
+    position: absolute;
+}
+
+.hero-talent-tree-talent[data-talent-type="3"][data-available] {
+    --heroTalent-boundaryImage: url("../images/talents-node-choice-green.webp");
+}
+.hero-talent-tree-talent-boundary, .hero-talent-tree-talent-inner, .hero-talent-tree-talent-inner-background {
+    box-sizing: border-box;
+    inset: 0;
+    position: absolute;
+}
+.hero-talent-tree-talent[data-talent-type="3"] .hero-talent-tree-talent-inner {
+    border-radius: 20%;
+    z-index: 0;
+}
+.hero-talent-tree-talent-inner {
+    inset: 10%;
+    overflow: hidden;
+}
+
+
+.hero-talent-tree-talent[data-available]:hover {
+    filter: brightness(1.35);
+}
+.hero-talent-tree-talent[data-talent-type="3"] .hero-talent-tree-talent-boundary-frame {
+    background-position: center;
+    inset: -17% -24.5%;
+    z-index: 5;
+}
+.hero-talent-tree-talent-boundary-frame {
+    background-image: var(--heroTalent-boundaryImage);
+    background-size: cover;
+    inset: 0;
+    position: absolute;
+}
+.hero-talent-tree-talent[data-talent-type="2"][data-available] {
+    --heroTalent-boundaryImage: url("../images/talents-node-circle-green.webp");
+}
+.hero-talent-tree-talent-boundary, .hero-talent-tree-talent-inner, .hero-talent-tree-talent-inner-background {
+    box-sizing: border-box;
+    inset: 0;
+    position: absolute;
+}
+.hero-talent-tree-talent[data-talent-type="2"] .hero-talent-tree-talent-inner {
+    border-radius: 1000px;
+}
+.hero-talent-tree-talent-boundary-frame {
+    background-image: var(--heroTalent-boundaryImage);
+    background-size: cover;
+    inset: 0;
+    position: absolute;
+}
+.hero-talent-tree-talent[data-talent-type="3"][data-available] {
+    --heroTalent-boundaryImage: url("../images/talents-node-choice-green.webp");
+}
+.hero-talent-tree [data-row="3"] {
+    grid-row: 3;
+}
+.hero-talent-tree [data-column="7"] {
+    grid-column: 7 / 9;
+}
+.hero-talent-tree-talent[data-available] {
+    cursor: pointer;
+    filter: none;
+}
+.hero-talent-tree-talent {
+    filter: grayscale(100%);
+    margin: 20%;
+    position: relative;
+    z-index: 20;
+}
+
+.hero-talent-tree-talent[data-talent-type="3"] .hero-talent-tree-talent-inner {
+    border-radius: 20%;
+    z-index: 0;
+}
+
+.hero-talent-tree-talent:not([data-choice-background]) .hero-talent-tree-talent-inner-background:nth-last-of-type(2) {
+    background-position: left center;
+    width: 50%;
+    z-index: 10;
+}
+.hero-talent-tree-talent-inner-background {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.hero-talent-tree-talent-boundary, .hero-talent-tree-talent-inner, .hero-talent-tree-talent-inner-background {
+    box-sizing: border-box;
+    inset: 0;
+    position: absolute;
+}
+.hero-talent-tree-talent-inner-background {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.hero-talent-tree-talent[data-talent-type="3"] .hero-talent-tree-talent-boundary-frame {
+    background-position: center;
+    inset: -17% -24.5%;
+    z-index: 5;
+}
+.hero-talent-tree-talent-boundary-frame {
+    background-image: var(--heroTalent-boundaryImage);
+    background-size: cover;
+    inset: 0;
+    position: absolute;
+}
+.hero-talent-tree-talent[data-talent-type="2"][data-available] {
+    --heroTalent-boundaryImage: url("../images/talents-node-circle-green.webp");
+}
+.hero-talent-tree [data-row="4"] {
+    grid-row: 4;
+}
+.hero-talent-tree-talent-boundary-frame {
+    background-image: var(--heroTalent-boundaryImage);
+    background-size: cover;
+    inset: 0;
+    position: absolute;
+}
+.hero-talent-tree-talent[data-talent-type="2"][data-available] {
+    --heroTalent-boundaryImage: url("../images/talents-node-circle-green.webp");
+}
+
+.hero-talent-tree-talent-inner-background {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.hero-talent-tree-talent-boundary-frame {
+    background-image: var(--heroTalent-boundaryImage);
+    background-size: cover;
+    inset: 0;
+    position: absolute;
+}
+.hero-talent-tree-talent[data-talent-type="2"][data-available] {
+    --heroTalent-boundaryImage: url("../images/talents-node-circle-green.webp");
+}
+.hero-talent-tree-talent[data-talent-type="2"] .hero-talent-tree-talent-inner {
+    border-radius: 1000px;
+}
+.hero-talent-tree-talent-inner-background {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.hero-talent-tree-talent-boundary-frame {
+    background-image: var(--heroTalent-boundaryImage);
+    background-size: cover;
+    inset: 0;
+    position: absolute;
+}
+.hero-talent-tree-talent[data-talent-type="2"][data-available] {
+    --heroTalent-boundaryImage: url("../images/talents-node-circle-green.webp");
+}
+
+.hero-talent-tree [data-row="5"] {
+    grid-row: 5;
+}
+.hero-talent-tree-talent-inner-background {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.hero-talent-tree-talent-boundary-frame {
+    background-image: var(--heroTalent-boundaryImage);
+    background-size: cover;
+    inset: 0;
+    position: absolute;
+}
+
+.hero-talent-tree-talent-boundary, .hero-talent-tree-talent-inner, .hero-talent-tree-talent-inner-background {
+    box-sizing: border-box;
+    inset: 0;
+    position: absolute;
+}
+.hero-talent-tree-talent-inner-background {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.hero-talent-tree-talent-boundary-frame {
+    background-image: var(--heroTalent-boundaryImage);
+    background-size: cover;
+    inset: 0;
+    position: absolute;
+}
+.hero-talent-tree-talent[data-talent-type="3"][data-available] {
+    --heroTalent-boundaryImage: url("../images/talents-node-choice-green.webp");
+}
+.hero-talent-tree [data-row="5"] {
+    grid-row: 5;
+}
+.hero-talent-tree-talent-boundary, .hero-talent-tree-talent-inner, .hero-talent-tree-talent-inner-background {
+    box-sizing: border-box;
+    inset: 0;
+    position: absolute;
+}
+.hero-talent-tree-talent[data-talent-type="3"] .hero-talent-tree-talent-inner {
+    border-radius: 20%;
+    z-index: 0;
+}
+.hero-talent-tree-talent:not([data-choice-background]) .hero-talent-tree-talent-inner-background:nth-last-of-type(2) {
+    background-position: left center;
+    width: 50%;
+    z-index: 10;
+}   
+.hero-talent-tree-talent-inner-background {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.hero-talent-tree-talent[data-talent-type="3"] .hero-talent-tree-talent-boundary-frame {
+    background-position: center;
+    inset: -17% -24.5%;
+    z-index: 5;
+}
+.hero-talent-tree-talent[data-talent-type="2"][data-available] {
+    --heroTalent-boundaryImage: url("../images/talents-node-circle-green.webp");
+}
+.hero-talent-tree-talent-boundary, .hero-talent-tree-talent-inner, .hero-talent-tree-talent-inner-background {
+    box-sizing: border-box;
+    inset: 0;
+    position: absolute;
+}
+.hero-talent-tree-talent[data-talent-type="2"] .hero-talent-tree-talent-inner {
+    border-radius: 1000px;
+}
+.hero-talent-tree-talent-inner-background {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.hero-talent-tree-talent-boundary-frame {
+    background-image: var(--heroTalent-boundaryImage);
+    background-size: cover;
+    inset: 0;
+    position: absolute;
+}
+
+.hero-talent-tree [data-row="2"] {
+    grid-row: 2;
+}
+.hero-talent-tree [data-row="3"] {
+    grid-row: 3;
+}
+.hero-talent-tree [data-column="3"] {
+    grid-column: 3 / 5;
+}
+.hero-talent-tree [data-column="5"] {
+    grid-column: 5 / 7;
+}
+.hero-talent-tree [data-column="5"] {
+    grid-column: 5 / 7;
+}
+.hero-talent-tree [data-column="7"] {
+    grid-column: 7 / 9;
+}
+.hero-talent-tree [data-row="4"] {
+    grid-row: 4;
+}
+.hero-talent-tree [data-column="3"] {
+    grid-column: 3 / 5;
+}
+.hero-talent-tree [data-column="5"] {
+    grid-column: 5 / 7;
+}
+.hero-talent-tree [data-row="4"] {
+    grid-row: 4;
+}
+.hero-talent-tree [data-column="7"] {
+    grid-column: 7 / 9;
+}
+.hero-talent-tree [data-row="5"] {
+    grid-row: 5;
+}
+.hero-talent-tree [data-column="3"] {
+    grid-column: 3 / 5;
+}
+.hero-talent-tree [data-row="5"] {
+    grid-row: 5;
+}
+.hero-talent-tree [data-column="5"] {
+    grid-column: 5 / 7;
+}
+.hero-talent-tree [data-row="5"] {
+    grid-row: 5;
+}
+.hero-talent-tree [data-column="7"] {
+    grid-column: 7 / 9;
+}
+.hero-talent-tree [data-row="6"] {
+    grid-row: 6;
+}
+.hero-talent-tree [data-column="5"] {
+    grid-column: 5 / 7;
+}
+.hero-talent-tree-talent[data-talent-type="3"] .hero-talent-tree-talent-inner {
+    border-radius: 50%;
+    z-index: 0;
+}
+.hero-talent-tree-talent:not([data-choice-background]) .hero-talent-tree-talent-inner-background:nth-last-of-type(2) {
+    background-position: left center;
+    width: 50%;
+    z-index: 10;
+}
+
+
+.hero-talent-tree-connection {
+    height: 12px;
+    margin-top: -6px;
+    position: absolute;
+    transform-origin: left center;
+}
+.hero-talent-tree-connection[data-available] .hero-talent-tree-connection-line {
+    background-image: url("../images/talents-arrow-line-yellow.png");
+}
+.hero-talent-tree-connection-line {
+    /* background-image: url("/images/tools/profession-tree-calc/talents-arrow-line-gray.png"); */
+    background-position: center;
+    background-repeat: repeat-x;
+    background-size: 8px;
+    inset: 0;
+    position: absolute;
+}
+.hero-talent-tree-connection[data-available] .hero-talent-tree-connection-arrow {
+    background-image: url("../images/talents-arrow-head-yellow.png");
+}
+.hero-talent-tree-connection-arrow {
+    background-size: cover;
+    height: 12px;
+    position: absolute;
+    right: -6px;
+    top: 0;
+    transform: rotate(270deg);
+    width: 12px;
+}
+
+
+.hover-text{
+    position: absolute;
+
+    max-width: 300px;
+    border: 2px solid #303030;
+    padding:10px ;
+    transition: background 100ms, border 100ms;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.5);
+    background-color: #1c1c1c;
+    border-radius: 10px;
+    display: none;
+    z-index: 99;
+    overflow: hidden;
+}
+.hover-text h3{
+    color: white;
+    font-weight: 400;
+    padding: 0px;
+    margin: 0px;
+
+}
+.hover-text p{
+    color: #f8b700;
+
+
+}
